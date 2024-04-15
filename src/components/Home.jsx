@@ -26,6 +26,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Card from "./ProfileCard.jsx";
 import Grid from '@mui/material/Grid';
+import Avatar from '@mui/material/Avatar';
 
 const drawerWidth = 240;
 
@@ -146,10 +147,10 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} sx={{ bgcolor: "#C8D9C1" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="#313A5C"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -158,14 +159,17 @@ export default function MiniDrawer() {
               ...(open && { display: 'none' }),
             }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize='large'></MenuIcon>
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            We Meet
+          <IconButton href='/' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 0, pl: 0 }}>
+                <Avatar alt="Remy Sharp" src="/wemeet logo appbar.png" sx={{ height: "80" , width: "80"}}/>
+              </IconButton>
+          <Typography color='#313A5C' variant="h6" noWrap component="div" fontWeight={700}>
+            WeMeet
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" open={open} sx={{ bgcolor: "#44538D" }}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -320,16 +324,10 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid container spacing={1} columns={{ xs: 4, sm: 8, md: 12 }} alignItems="center" justifyContent="center">
           {dataList.map((user, index) => (
-            <Grid item xs={2} sm={4} md={4} key={index}>
-              <Card profile={user.picture}></Card>
-              <Typography variant="h6" gutterBottom>
-                Name: {user.name}
-              </Typography>
-              <Typography variant="body1" gutterBottom>
-                Email: {user.email}
-              </Typography>
+            <Grid item xs={3} sm={3} md={4} key={index} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+              <Card profile={user.picture} name={user.name} username={user.username}></Card>
               <Divider />
             </Grid>
           ))}
