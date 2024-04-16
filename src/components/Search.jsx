@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function BlankComponent() {
+export default function Search() {
   return (
-    <div>
-      hi1
-    </div>
+    <h1>
+      hi
+    </h1>
   );
 }
