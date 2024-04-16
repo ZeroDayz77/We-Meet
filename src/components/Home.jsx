@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <Grid container spacing={1} columns={{ xs: 4, sm: 8, md: 12 }} alignItems="center" justifyContent="center">
       {dataList.map((user, index) => (
-        <Grid item xs={3} sm={3} md={4} key={index} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', my: 2 }}>
           <Card university={user.university} loading={loading} profile={user.picture} name={user.name} username={user.username}></Card>
           <Divider />
         </Grid>
