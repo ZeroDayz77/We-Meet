@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Profile-page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+
+  body{
+    background-color:  #313A5C;
+  }
+  .About-text {
+    width: 70%;
+  }
+
+  label {
+    display: inline-block;
+    max-width: 300px;
+    text-align: left;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 3%;
+    padding-bottom: 10px;
+    background-color: rgb(44, 55, 97);
+    color: white;
+  }
+
+  .Name {
+    width: 60%;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+    padding-left: 7px;
+  }
+
+  .Age {
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+    padding-left: 7px;
+  }
+
+  .University {
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+    padding-left: 7px;
+  }
+
+  .Instagram {
+    width: 60%;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 7px;
+  }
+
+  .bars{
+    background-color: rgb(171, 181, 148);
+    border-radius: 3px;
+    height: 10px;
+    
+  }
+
+</style>
+
+<body>
+  <div class="container"">
+    <div class=" card">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDaWpTOnUCDqRIz8hHShOTcZzs4Vddd7SbKDaww_IsBg&s"
+      class="profile-img" class="image" style="width:100%">
+
+    <form class="personal-info">
+      <input class="Name" type="text" placeholder="Enter your name"><br>
+
+      <input class="Age" type="number" placeholder="Enter your age"><br>
+
+      <input class="University" type="text" placeholder="Enter your university"><br>
+
+      <input class="Instagram" type="text" placeholder="Enter your instagram @">
+
+    </form>
+    
+    <hr class="bars">
+      
+    <h1>What are you looking for?</h1>
+    <form class="boxes">
+      <input type="checkbox" id="Friendship" name="want1" value="friendship">
+      <label for="Friendship">I want a friendship</label><br>
+      <input type="checkbox" id="Relationship" name="want2" value="Relationship">
+      <label for="Relationship">I want a relationship</label><br>
+      <input type="checkbox" id="Study groups" name="want3" value="Study">
+      <label for="Study">I want a study group</label><br>
+      <input type="checkbox" id="Thinking" name="want4" value="Thinking">
+      <label for="Thinking">Thinking about it </label><br><br>
+      <input type="submit" value="Submit" style="margin-bottom: 10px;">
+      
+    </form>
+      <hr class="bars">
+      
+    <label for="About"><h1>About me:</h1></label>
+    <textarea class="About-text" type="text" placeholder="Write a little something about yourself" rows="4" cols="50">
+    </textarea>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>'
