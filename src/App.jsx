@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation} from 'react-router-dom';
 import Home from "./components/Home.jsx";
 import Search from "./components/Search.jsx";
 import Notifications from "./components/Notifications.jsx";
@@ -97,7 +97,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-function Nav() {
+function Nav({ handleLogout }) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -105,6 +105,7 @@ function Nav() {
   useEffect(() => {
     document.title = `We Meet - ${getPageTitle(location.pathname)}`;
   }, [location]);
+
 
   const getPageTitle = (path) => {
     switch (path) {
@@ -293,6 +294,7 @@ function Nav() {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
+              onClick={handleLogout}
             >
               <ListItemIcon
                 sx={{
@@ -310,16 +312,23 @@ function Nav() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="/search" element={<Search />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/notifications" element={<Notifications />} />
+            <Route path="/search" element={<Search />} />
+          </Routes>
       </Box>
     </Box>
   );
 }
 
 export default function App() {
-  return <Nav />;
+  const handleLogout = () => {
+    // Delete user data from localStorage
+    localStorage.removeItem('userData');
+    // Reload the page to reflect logout changes
+    window.location.reload();
+  };
+
+  return <Nav handleLogout={handleLogout} />;
 }

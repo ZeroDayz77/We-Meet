@@ -1,39 +1,47 @@
-body
-{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sign-up-box {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     background-image: url(wemeet\ group\ pic.jpg);
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.sign-up-form
-{
-    width: 300px;
-     box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
-     background: #ffffff33;
-     padding: 20px;
-     margin: 8% auto;
-     text-align: center;
 
+.sign-up-form {
+    width: 350px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: #535353a6;
+    padding: 20px;
+    text-align: center;
 }
-.sign-up-form h1
-{
+
+.sign-up-form h1 {
     color: #313A5C;
     margin-bottom: 30px;
 }
-.input-box
-{
+
+.input-box {
     background-color: #c8d9c1aa;
     border-radius: 20px;
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
+    margin: 10px auto;
     border: 1px solid #999;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
 }
-button{
-    color: #C8D9C1;
+
+.signup-btn {
+    color: #FFFFFF;
     width: 100%;
     padding: 10px;
     border-radius: 20px;
@@ -42,15 +50,7 @@ button{
     outline: none;
     cursor: pointer;
 }
-.signup-btn
-{
+
+.signup-btn {
     background-color: #313A5C;
-}
-a{
-    text-decoration: none;
-}
-hr
-{
-    margin-top: 20px;
-    width: 80%;
 }
