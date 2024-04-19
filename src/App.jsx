@@ -133,7 +133,7 @@ function Nav({ handleLogout }) {
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: '100vh'}}>
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{ bgcolor: "#C8D9C1" }}>
         <Toolbar>
@@ -331,10 +331,10 @@ export default function App() {
 
   const navigate = useNavigate();
   const handleLogout = () => {
-    // Delete user data from localStorage
+    // "logout" user, but for now it just deletes
     localStorage.removeItem('userData');
     localStorage.removeItem('profileImg');
-    // Reload the page to reflect logout changes
+    // reload page
     navigate('/');
     window.location.reload();
   };
