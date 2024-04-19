@@ -2,6 +2,7 @@ import React from 'react';
 import "./SignUp.css";
 import { useNavigate } from 'react-router-dom';
 import { Box, Divider } from '@mui/material';
+import background from "/wemeet group pic.jpg";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -20,16 +21,16 @@ export default function SignUp() {
   };
 
   return (
-    <Box className="sign-up-box">
+    <Box className="sign-up-box" sx={{ backgroundImage: `url(${background})` }}>
       <Box className="sign-up-form">
         <h1>Sign Up Now</h1>
         <form onSubmit={handleSubmit}>
           <input type="email" name="email" className="input-box" placeholder="Your Email"/>
           <input type="password" name="password" className="input-box" placeholder="Your Password" />
-          <p><span><input type="checkbox" /></span> I agree to the terms and services</p>
+          <p className='tos'><span><input type="checkbox" /></span> I agree to the terms and services</p>
           <button type="submit" className="signup-btn">Sign up</button>
           <Divider></Divider>
-          <p>Already have an account ? <a href="/">Login</a></p>
+          <p className='login-redirect'>Already have an account ? <a href="/">Login</a></p>
         </form>
       </Box>
     </Box>

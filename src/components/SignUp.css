@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url(wemeet\ group\ pic.jpg);
+    /* background-image: url(\wemeet\ group\ pic.jpg); */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -25,7 +25,7 @@ body {
 }
 
 .sign-up-form h1 {
-    color: #313A5C;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
@@ -53,4 +53,22 @@ body {
 
 .signup-btn {
     background-color: #313A5C;
+}
+
+.login-redirect {
+    color: #FFFFFF;
+}
+
+.tos {
+    color: #FFFFFF;
+}
+
+.login-redirect a:visited {
+    color: #FFFFFF;
+    text-decoration-color: rgb(65, 105, 155);
+}
+
+.login-redirect a:hover {
+    color: #FFFFFF;
+    text-decoration-color: #FFFFFF;
 }
