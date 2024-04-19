@@ -27,6 +27,8 @@ const defaultTheme = createTheme();
 
 export default function Login() {
 
+    document.title = `We Meet - Login`;
+
     const [loggedIn, setLoggedIn] = useState(false);
 
     const handleSubmit = (event) => {

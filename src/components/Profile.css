@@ -1,0 +1,68 @@
+.About-text {
+    width: 100%;
+}
+
+.profile-img {
+    margin-bottom: 1rem;
+}
+
+
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxes div {
+    margin-bottom: 5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    box-shadow: 10px 10px 20px 2px rgba(0,0,0,0.43);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    border-radius: 3%;
+    padding-bottom: 2rem;
+    background-color: rgb(44, 55, 97);
+    color: white;
+}
+
+.Name,
+.Username,
+.File,
+.Age,
+.University,
+.Instagram,
+.submit-btn {
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 2px;
+    padding-left: 7px;
+}
+
+.File {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-btn {
+    color: #000000;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 20px;
+}

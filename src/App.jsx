@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, useLocation} from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import Home from "./components/Home.jsx";
 import Search from "./components/Search.jsx";
 import Notifications from "./components/Notifications.jsx";
@@ -29,6 +29,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
 import { styled, useTheme } from '@mui/material/styles';
 import { Link } from '@mui/material';
+import Profile from './components/Profile.jsx';
 
 const drawerWidth = 240;
 
@@ -115,6 +116,8 @@ function Nav({ handleLogout }) {
         return 'Notifications';
       case '/search':
         return 'Search';
+      case '/profile':
+        return 'Profile';
       default:
         return 'We Meet';
     }
@@ -254,6 +257,7 @@ function Nav({ handleLogout }) {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
+              href='/profile'
             >
               <ListItemIcon
                 sx={{
@@ -316,6 +320,7 @@ function Nav({ handleLogout }) {
             <Route path="/" element={<Home />} />
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
       </Box>
     </Box>
@@ -323,10 +328,14 @@ function Nav({ handleLogout }) {
 }
 
 export default function App() {
+
+  const navigate = useNavigate();
   const handleLogout = () => {
     // Delete user data from localStorage
     localStorage.removeItem('userData');
+    localStorage.removeItem('profileImg');
     // Reload the page to reflect logout changes
+    navigate('/');
     window.location.reload();
   };
 
