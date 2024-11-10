@@ -23,7 +23,7 @@ export default function ProfileCard({ name, profile, username, loading, universi
   return (
     <Card
       sx={{ width: 350, minWidth: 200, height: 350, minHeight: 200, display: 'flex', flexDirection: 'column' }}
-      style={{ display: "inline-block", borderRadius: 10, backgroundColor: "#44538D", color: "white", boxShadow: "10px 10px 20px 2px rgba(0,0,0,0.43)" }}
+      style={{ display: "flex", borderRadius: 10, backgroundColor: "#44538D", color: "white", boxShadow: "10px 10px 20px 2px rgba(0,0,0,0.43)" }}
     >
       <CardHeader
         subheader={loading ? <Skeleton /> : name} 
