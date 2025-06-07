@@ -33,7 +33,7 @@ export default function Home() {
       try {
         const tempDataList = [];
         for (let i = 0; i < 20; i++) {
-          const response = await fetch('https://randomuser.me/api/');
+          const response = await fetch('/api/proxy/');
           if (!response.ok) {
             throw new Error('Failed to fetch data');
           }
