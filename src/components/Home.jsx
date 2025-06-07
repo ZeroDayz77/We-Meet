@@ -37,7 +37,7 @@ export default function Home() {
         
         // Create promises for all API calls
         const fetchPromises = Array.from({ length: 20 }, async () => {
-          const response = await fetch('/api/proxy/');
+          const response = await fetch('https://corsproxy.io/?https://randomuser.me/api/');
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
