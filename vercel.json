@@ -1,13 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      },
-      {
+  "rewrites": [
+    {
       "source": "/api/proxy/:path*",
       "destination": "https://randomuser.me/api/:path*"
-      }
-    ]
-  }
-  
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
